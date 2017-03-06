@@ -10,7 +10,13 @@ This is maybe a bit more simple and has some useful explanation you can follow f
 I originally tried this with the Finnish language and used the [FinnTreeBank](http://www.ling.helsinki.fi/kieliteknologia/tutkimus/treebank/) data to train the tagger.
 However, any language and similar datasets should probably work.
 
-There is a Python script in the source tree that was used to parse the FinnTreeBank to suitable format for what this eats.
-There is also another Python script there that takes the same data and outputs a format suitable for OpenNLP.
-You can then try the different approaches if you like.
+There is a Python [script](https://github.com/mukatee/little-pos-tagger/blob/master/src/main/python/ftb_parser.py) 
+in the source tree that was used to parse the FinnTreeBank to suitable format for what this eats.
+There is also another Python [script](https://github.com/mukatee/little-pos-tagger/blob/master/src/main/python/ftb_parser_opennlp.py) 
+there that takes the same data and outputs a format suitable for OpenNLP.
+You can then try the different approaches if you like. And use them as a basis for some other treebanks I guess..
 I couldn't quite figure out a good configuration for the Stanford tagger but it should be able to take one of the above inputs as well if you can create the config.
+
+There is are examples in the [examples](https://github.com/mukatee/little-pos-tagger/tree/master/src/main/java/net/kanstren/littlepos/examples) package 
+on how to [train](https://github.com/mukatee/little-pos-tagger/blob/master/src/main/java/net/kanstren/littlepos/examples/FTBLoader.java) the tagger and 
+how to use it for [predictions](https://github.com/mukatee/little-pos-tagger/blob/master/src/main/java/net/kanstren/littlepos/examples/PredictionTester.java).
