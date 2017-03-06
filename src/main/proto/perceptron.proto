@@ -1,0 +1,51 @@
+syntax = "proto3";
+
+option java_package = "net.kanstren.littlepos.generated.protobuf";
+
+message PerceptronModel {
+    int32 update_count = 1;
+    repeated TimeStamp timestamp = 2;
+    repeated FeatureWeights weight = 3;
+    repeated PairWeight total = 4;
+    //statistics related items
+    repeated string unique_tag = 5; //set of unique tags in all the training data
+    repeated string unique_word = 6; //set of unique words in all the training data
+    repeated WordTag single_tag = 7; //words that clearly have only one tag associated with them
+    repeated WordTagFrequency freq = 8;
+
+}
+
+message TimeStamp {
+    string pair = 1;
+    int32 iteration = 2;
+}
+
+message FeatureWeights {
+    string feature_id = 1;
+    repeated TagWeight weight = 2;
+}
+
+message TagWeight {
+    string tag = 1;
+    double weight = 2;
+}
+
+message PairWeight {
+    string pair = 1;
+    double weight = 2;
+}
+
+message WordTag {
+    string word = 1;
+    string tag = 2;
+}
+
+message WordTagFrequency {
+    string word = 1;
+    repeated TagCount tag_count = 2;
+}
+
+message TagCount {
+    string tag = 1;
+    int32 count = 2;
+}
