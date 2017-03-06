@@ -20,3 +20,5 @@ I couldn't quite figure out a good configuration for the Stanford tagger but it 
 There is are examples in the [examples](https://github.com/mukatee/little-pos-tagger/tree/master/src/main/java/net/kanstren/littlepos/examples) package 
 on how to [train](https://github.com/mukatee/little-pos-tagger/blob/master/src/main/java/net/kanstren/littlepos/examples/FTBLoader.java) the tagger and 
 how to use it for [predictions](https://github.com/mukatee/little-pos-tagger/blob/master/src/main/java/net/kanstren/littlepos/examples/PredictionTester.java).
+
+The process of building this and trying to figure out what it is all about is explained in more detail [here](https://swenotes.wordpress.com/2017/03/06/building-a-finnish-part-of-speech-tagger/).
